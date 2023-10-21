@@ -1,6 +1,6 @@
 # Hello World
 
-## gofmt
+## gofmt ✓
 
 Try to fix `main.go` file using `gofmt` command and show diff data from `gofmt -d example01` command.
 
@@ -18,9 +18,22 @@ Fix and save automatically using `-w` flag: `gofmt -w example01`
 
 ## golint
 
-Try to improve code quailty using `golint` command.
+Golint is deprecated and should be replaced by [Staticcheck](https://staticcheck.io/).
 
 ```
-example01/main.go:13:1: exported function HelloWorld should have comment or be unexported
-example01/main.go:13:17: don't use underscores in Go names; func parameter user_name should be userName
+go install honnef.co/go/tools/cmd/staticcheck@latest
+staticcheck -checks all
+```
+
+The explanations are available at 
+
+```
+staticcheck -explain SA1006
+```
+
+Go vet should also be used: `go vet .`
+
+```
+main.go:7:2: printf-style function with dynamic format string and no further arguments should use print-style function instead (SA1006)
+main.go:15:17: should not use underscores in Go names; func parameter user_name should be userName (ST1003)
 ```
