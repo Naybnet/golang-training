@@ -4,6 +4,15 @@
 
 Learning basic [Golang](https://go.dev/) in one day
 
+## Update GO version
+
+```
+./upgrade-go.sh $VERSION
+```
+
+## Manage go modules
+
+
 ## Example code
 
 * [example01](./example01-hello-world): Show hello world. Try to use [golint][1] and [gofmt][2] tool.
