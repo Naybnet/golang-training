@@ -1,3 +1,4 @@
+// Go programs are made of packages
 package controller
 
 import "fmt"

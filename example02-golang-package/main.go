@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-
+	// package name = last element of the import path
 	"github.com/go-training/training/example02-golang-package/controller"
 )
 
