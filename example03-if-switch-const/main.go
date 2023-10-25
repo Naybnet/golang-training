@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Constants cannot be declared using the := syntax
 const (
 	monday = iota + 1
 	tuesday
@@ -54,7 +55,9 @@ func main() {
 	fmt.Println(stringSlice1[:2])
 	fmt.Println(stringSlice1[2:])
 
+	// stringSlice2[4] is empty string
 	stringSlice2 := make([]string, 5, 10)
+	fmt.Println(stringSlice2)
 	copy(stringSlice2, stringSlice1)
 	fmt.Println(stringSlice2[0])
 
@@ -62,7 +65,7 @@ func main() {
 	fmt.Println(stringSlice2)
 	fmt.Println(stringSlice2[5])
 	fmt.Println(stringSlice2[6])
-	stringSlice2 = append(stringSlice2, []string{"7", "8"}...)
+	stringSlice2 = append(stringSlice2, []string{"7", "8", "9", "10", "11", "12"}...)
 	fmt.Println(stringSlice2)
 	fmt.Println(stringSlice2[7])
 	fmt.Println(stringSlice2[8])

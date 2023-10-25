@@ -1,5 +1,6 @@
 package main
 
+// A value of interface type can hold any value that implements those methods.
 var (
 	i interface{}
 )
@@ -7,7 +8,7 @@ var (
 func convert(i interface{}) {
 	switch t := i.(type) {
 	case int:
-		println("i is interger", t)
+		println("i is integer", t)
 	case string:
 		println("i is string", t)
 	case float64:
