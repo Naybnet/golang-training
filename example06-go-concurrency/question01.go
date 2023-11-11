@@ -4,9 +4,13 @@ import (
 	"fmt"
 )
 
+func print() {
+	fmt.Println("Let's Go")
+
+}
+
+// How to print "Let's Go"?
 func main() {
-	go func() {
-		fmt.Println("Let's Go")
-	}()
+	go print()
 	// fmt.Println("exit!!!!")
 }

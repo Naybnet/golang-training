@@ -13,6 +13,7 @@ func main() {
 		close(c)
 	}()
 
+	// Needs a closed channel otherwise deadlock
 	for v := range c {
 		fmt.Println(v)
 	}
