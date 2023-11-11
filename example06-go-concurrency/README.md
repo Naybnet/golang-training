@@ -13,7 +13,7 @@ A few references :
 - https://go101.org/article/channel.html
 - https://docs.google.com/document/d/1yIAYmbvL3JxOKOjuCyon7JhW4cSv1wy5hC0ApeGMV9s/pub
 
-# Question 01
+## Question 01
 
 To call a function synchronously:
 
@@ -38,3 +38,7 @@ time.Sleep(time.Second)
 Otherwise channels can be used.
 
 > Channels are the pipes that connect concurrent goroutines. You can send values into channels from one goroutine and receive those values into another goroutine.
+
+## Question 03
+
+`go run -race` allows to detect race conditions.
